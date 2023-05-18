@@ -5,6 +5,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// 导出的方法（或函数、变量）需要使用大写字母开头的大驼峰写法来表示
 func UserLogin(c *gin.Context) {
 	name := c.Query("name")
 	password := c.Query("password")
