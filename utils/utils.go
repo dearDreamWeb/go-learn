@@ -18,9 +18,12 @@ func GetTimeUnix() int64 {
 }
 
 func MD5(str string) string {
-	s := md5.New()
-	s.Write([]byte(str))
-	return hex.EncodeToString(s.Sum(nil))
+	b := []byte(str)
+	s := []byte("gt4si3tbrl8udpla4dlv9wta")
+	h := md5.New()
+	h.Write(s) // 先写盐值
+	h.Write(b)
+	return hex.EncodeToString(h.Sum(nil))
 }
 
 // 生成签名

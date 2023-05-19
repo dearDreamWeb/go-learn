@@ -15,6 +15,7 @@ func InitRouter(r *gin.Engine) {
 	GroupV1 := r.Group("/v1")
 	{
 		GroupV1.Any("/userLogin", v1.UserLogin)
+		GroupV1.Any("/userRegister", v1.UserRegister)
 	}
 
 	GroupV2 := r.Group("/v2")
