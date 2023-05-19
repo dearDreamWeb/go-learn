@@ -77,3 +77,5 @@ time="2023-05-19T16:34:49+08:00" level=info client_ip="::1" latency_time="919.9Â
 time="2023-05-19T16:34:54+08:00" level=info client_ip="::1" latency_time="482.2Âµs" req_method=GET req_uri="/v1/userLogin?name=%E5%90%B4%E8%B6%85&password=123456" status_code=200
 {"client_ip":"::1","latency_time":1006400,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userLogin?name=%E5%90%B4%E6%9D%B0%E8%B6%85\u0026password=123456","status_code":200,"time":"2023-05-19 16:35:02"}
 time="2023-05-19T16:35:02+08:00" level=info client_ip="::1" latency_time=1.0064ms req_method=GET req_uri="/v1/userLogin?name=%E5%90%B4%E6%9D%B0%E8%B6%85&password=123456" status_code=200
+{"client_ip":"::1","latency_time":1516000,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userLogin?name=%E5%90%B4%E6%9D%B0%E8%B6%85\u0026password=123456","status_code":200,"time":"2023-05-19 17:18:23"}
+time="2023-05-19T17:18:23+08:00" level=info client_ip="::1" latency_time=1.516ms req_method=GET req_uri="/v1/userLogin?name=%E5%90%B4%E6%9D%B0%E8%B6%85&password=123456" status_code=200

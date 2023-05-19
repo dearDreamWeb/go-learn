@@ -11,6 +11,7 @@ import (
 )
 
 type Person struct {
+	Id       string
 	Name     string
 	Password string
 }
@@ -25,7 +26,7 @@ func UserLogin(c *gin.Context) {
 	model.UsersCollection.FindOne(context.Background(), filter).Decode(&result)
 
 	fmt.Printf("name: %s,password: %s\n", name, utils.MD5(password))
-
+	fmt.Println(result.Id)
 	if (Person{} == result) {
 		c.JSON(http.StatusOK, gin.H{
 			"success": false,
