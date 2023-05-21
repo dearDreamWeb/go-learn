@@ -65,3 +65,75 @@ time="2023-05-21T17:45:40+08:00" level=info client_ip="::1" latency_time="985.08
 time="2023-05-21T17:48:07+08:00" level=info client_ip="::1" latency_time=1.038875ms req_method=GET req_uri="/v1/userLogin?name=wxb&password=123456" status_code=200
 {"client_ip":"::1","latency_time":2397792,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userLogin?name=wxb\u0026password=123456","status_code":200,"time":"2023-05-21 17:57:57"}
 time="2023-05-21T17:57:57+08:00" level=info client_ip="::1" latency_time=2.397792ms req_method=GET req_uri="/v1/userLogin?name=wxb&password=123456" status_code=200
+{"client_ip":"::1","latency_time":1848750,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userLogin?name=wxb\u0026password=123456","status_code":200,"time":"2023-05-21 19:51:35"}
+time="2023-05-21T19:51:35+08:00" level=info client_ip="::1" latency_time=1.84875ms req_method=GET req_uri="/v1/userLogin?name=wxb&password=123456" status_code=200
+{"client_ip":"::1","latency_time":1111042,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userLogin?name=wxb\u0026password=123456","status_code":200,"time":"2023-05-21 19:59:44"}
+time="2023-05-21T19:59:44+08:00" level=info client_ip="::1" latency_time=1.111042ms req_method=GET req_uri="/v1/userLogin?name=wxb&password=123456" status_code=200
+{"client_ip":"::1","latency_time":2844542,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userLogin?name=wxb\u0026password=123456","status_code":200,"time":"2023-05-21 20:00:53"}
+time="2023-05-21T20:00:53+08:00" level=info client_ip="::1" latency_time=2.844542ms req_method=GET req_uri="/v1/userLogin?name=wxb&password=123456" status_code=200
+{"client_ip":"::1","latency_time":74042,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userLogin?name=wxb\u0026password=123456","status_code":401,"time":"2023-05-21 20:01:07"}
+time="2023-05-21T20:01:07+08:00" level=info client_ip="::1" latency_time="74.042µs" req_method=GET req_uri="/v1/userLogin?name=wxb&password=123456" status_code=401
+{"client_ip":"::1","latency_time":1376583,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userLogin?name=wxb\u0026password=123456","status_code":200,"time":"2023-05-21 20:01:55"}
+time="2023-05-21T20:01:55+08:00" level=info client_ip="::1" latency_time=1.376583ms req_method=GET req_uri="/v1/userLogin?name=wxb&password=123456" status_code=200
+{"client_ip":"::1","latency_time":337791,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/addOrder","status_code":200,"time":"2023-05-21 21:02:58"}
+time="2023-05-21T21:02:58+08:00" level=info client_ip="::1" latency_time="337.791µs" req_method=POST req_uri=/v2/addOrder status_code=200
+{"client_ip":"::1","latency_time":52067041,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/addOrder","status_code":200,"time":"2023-05-21 21:03:29"}
+time="2023-05-21T21:03:29+08:00" level=info client_ip="::1" latency_time=52.067041ms req_method=POST req_uri=/v2/addOrder status_code=200
+{"client_ip":"::1","latency_time":125,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/getOrder","status_code":404,"time":"2023-05-21 22:14:40"}
+time="2023-05-21T22:14:40+08:00" level=info client_ip="::1" latency_time=125ns req_method=POST req_uri=/v2/getOrder status_code=404
+{"client_ip":"::1","latency_time":19974209,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/getOrder","status_code":200,"time":"2023-05-21 22:21:48"}
+time="2023-05-21T22:21:48+08:00" level=info client_ip="::1" latency_time=19.974209ms req_method=POST req_uri=/v2/getOrder status_code=200
+{"client_ip":"::1","latency_time":1491916,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/getOrder","status_code":200,"time":"2023-05-21 22:22:24"}
+time="2023-05-21T22:22:24+08:00" level=info client_ip="::1" latency_time=1.491916ms req_method=POST req_uri=/v2/getOrder status_code=200
+{"client_ip":"::1","latency_time":1734584,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/getOrder","status_code":200,"time":"2023-05-21 22:25:19"}
+time="2023-05-21T22:25:19+08:00" level=info client_ip="::1" latency_time=1.734584ms req_method=POST req_uri=/v2/getOrder status_code=200
+{"client_ip":"::1","latency_time":791667,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/addOrder","status_code":200,"time":"2023-05-21 22:25:59"}
+time="2023-05-21T22:25:59+08:00" level=info client_ip="::1" latency_time="791.667µs" req_method=POST req_uri=/v2/addOrder status_code=200
+{"client_ip":"::1","latency_time":969334,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userRegister?name=wxb\u0026password=123456","status_code":200,"time":"2023-05-21 22:26:47"}
+time="2023-05-21T22:26:47+08:00" level=info client_ip="::1" latency_time="969.334µs" req_method=GET req_uri="/v1/userRegister?name=wxb&password=123456" status_code=200
+{"client_ip":"::1","latency_time":2637334,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/addOrder","status_code":200,"time":"2023-05-21 22:28:21"}
+time="2023-05-21T22:28:21+08:00" level=info client_ip="::1" latency_time=2.637334ms req_method=POST req_uri=/v2/addOrder status_code=200
+{"client_ip":"::1","latency_time":12728166,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/getOrder","status_code":200,"time":"2023-05-21 22:28:30"}
+time="2023-05-21T22:28:30+08:00" level=info client_ip="::1" latency_time=12.728166ms req_method=POST req_uri=/v2/getOrder status_code=200
+{"client_ip":"::1","latency_time":2034333,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/getOrder","status_code":200,"time":"2023-05-21 22:31:48"}
+time="2023-05-21T22:31:48+08:00" level=info client_ip="::1" latency_time=2.034333ms req_method=POST req_uri=/v2/getOrder status_code=200
+{"client_ip":"::1","latency_time":1637125,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/getOrder","status_code":200,"time":"2023-05-21 22:32:14"}
+time="2023-05-21T22:32:14+08:00" level=info client_ip="::1" latency_time=1.637125ms req_method=POST req_uri=/v2/getOrder status_code=200
+{"client_ip":"::1","latency_time":1719000,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/getOrder","status_code":200,"time":"2023-05-21 22:32:28"}
+time="2023-05-21T22:32:28+08:00" level=info client_ip="::1" latency_time=1.719ms req_method=POST req_uri=/v2/getOrder status_code=200
+{"client_ip":"::1","latency_time":3381458,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/getOrder","status_code":200,"time":"2023-05-21 22:32:55"}
+time="2023-05-21T22:32:55+08:00" level=info client_ip="::1" latency_time=3.381458ms req_method=POST req_uri=/v2/getOrder status_code=200
+{"client_ip":"::1","latency_time":3827500,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/getOrder","status_code":200,"time":"2023-05-21 22:33:26"}
+time="2023-05-21T22:33:26+08:00" level=info client_ip="::1" latency_time=3.8275ms req_method=POST req_uri=/v2/getOrder status_code=200
+{"client_ip":"::1","latency_time":2890666,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/getOrder","status_code":200,"time":"2023-05-21 22:34:05"}
+time="2023-05-21T22:34:05+08:00" level=info client_ip="::1" latency_time=2.890666ms req_method=POST req_uri=/v2/getOrder status_code=200
+{"client_ip":"::1","latency_time":1478459,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/getOrder","status_code":200,"time":"2023-05-21 22:34:29"}
+time="2023-05-21T22:34:29+08:00" level=info client_ip="::1" latency_time=1.478459ms req_method=POST req_uri=/v2/getOrder status_code=200
+{"client_ip":"::1","latency_time":1562125,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/addOrder","status_code":200,"time":"2023-05-21 22:36:12"}
+time="2023-05-21T22:36:12+08:00" level=info client_ip="::1" latency_time=1.562125ms req_method=POST req_uri=/v2/addOrder status_code=200
+{"client_ip":"::1","latency_time":998917,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/addOrder","status_code":200,"time":"2023-05-21 22:37:20"}
+time="2023-05-21T22:37:20+08:00" level=info client_ip="::1" latency_time="998.917µs" req_method=POST req_uri=/v2/addOrder status_code=200
+{"client_ip":"::1","latency_time":1222500,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/addOrder","status_code":200,"time":"2023-05-21 22:44:32"}
+time="2023-05-21T22:44:32+08:00" level=info client_ip="::1" latency_time=1.2225ms req_method=POST req_uri=/v2/addOrder status_code=200
+{"client_ip":"::1","latency_time":2459667,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/addOrder","status_code":200,"time":"2023-05-21 22:45:24"}
+time="2023-05-21T22:45:24+08:00" level=info client_ip="::1" latency_time=2.459667ms req_method=POST req_uri=/v2/addOrder status_code=200
+{"client_ip":"::1","latency_time":1624333,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/getOrder","status_code":200,"time":"2023-05-21 22:45:50"}
+time="2023-05-21T22:45:50+08:00" level=info client_ip="::1" latency_time=1.624333ms req_method=POST req_uri=/v2/getOrder status_code=200
+{"client_ip":"::1","latency_time":4023166,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/getOrder","status_code":200,"time":"2023-05-21 22:46:39"}
+time="2023-05-21T22:46:39+08:00" level=info client_ip="::1" latency_time=4.023166ms req_method=POST req_uri=/v2/getOrder status_code=200
+{"client_ip":"::1","latency_time":5752541,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/getOrder","status_code":200,"time":"2023-05-21 22:47:25"}
+time="2023-05-21T22:47:25+08:00" level=info client_ip="::1" latency_time=5.752541ms req_method=POST req_uri=/v2/getOrder status_code=200
+{"client_ip":"::1","latency_time":2050584,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/getOrder","status_code":200,"time":"2023-05-21 22:50:19"}
+time="2023-05-21T22:50:19+08:00" level=info client_ip="::1" latency_time=2.050584ms req_method=POST req_uri=/v2/getOrder status_code=200
+{"client_ip":"::1","latency_time":1665916,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/getOrder","status_code":200,"time":"2023-05-21 22:54:03"}
+time="2023-05-21T22:54:03+08:00" level=info client_ip="::1" latency_time=1.665916ms req_method=POST req_uri=/v2/getOrder status_code=200
+{"client_ip":"::1","latency_time":1803208,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/getOrder","status_code":200,"time":"2023-05-21 23:09:42"}
+time="2023-05-21T23:09:42+08:00" level=info client_ip="::1" latency_time=1.803208ms req_method=POST req_uri=/v2/getOrder status_code=200
+{"client_ip":"::1","latency_time":32084250,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/addOrder","status_code":200,"time":"2023-05-21 23:09:54"}
+time="2023-05-21T23:09:54+08:00" level=info client_ip="::1" latency_time=32.08425ms req_method=POST req_uri=/v2/addOrder status_code=200
+{"client_ip":"::1","latency_time":1588500,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/getOrder","status_code":200,"time":"2023-05-21 23:09:59"}
+time="2023-05-21T23:09:59+08:00" level=info client_ip="::1" latency_time=1.5885ms req_method=POST req_uri=/v2/getOrder status_code=200
+{"client_ip":"::1","latency_time":2091625,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/getOrder","status_code":200,"time":"2023-05-21 23:12:35"}
+time="2023-05-21T23:12:35+08:00" level=info client_ip="::1" latency_time=2.091625ms req_method=POST req_uri=/v2/getOrder status_code=200
+{"client_ip":"::1","latency_time":1219625,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/getOrder","status_code":200,"time":"2023-05-21 23:24:13"}
+time="2023-05-21T23:24:13+08:00" level=info client_ip="::1" latency_time=1.219625ms req_method=POST req_uri=/v2/getOrder status_code=200

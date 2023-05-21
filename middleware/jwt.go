@@ -12,10 +12,17 @@ type UserInfo struct {
 	UserId string
 }
 
+var whiteList = []string{"/v1/userLogin", "/v1/userRegister"}
+
 // JwtVerify 校验token，
 // 从header 中Authorization获取token，格式是 Bearer + 空格 + token值 /*
 func JwtVerify() gin.HandlerFunc {
 	return func(c *gin.Context) {
+		requestUrl := c.Request.URL.Path
+		if utils.ArrayIncludes(whiteList, requestUrl) {
+			c.Next()
+			return
+		}
 		authorizationString := c.Request.Header.Get("Authorization")
 		arr := strings.Fields(authorizationString)
 		if len(arr) <= 1 {

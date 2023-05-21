@@ -17,5 +17,6 @@ func InitRouter(r *gin.Engine) {
 	GroupV2 := r.Group("/v2")
 	{
 		GroupV2.Any("/addOrder", v2.AddOrder)
+		GroupV2.Any("/getOrder", v2.GetOrder)
 	}
 }

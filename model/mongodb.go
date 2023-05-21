@@ -8,6 +8,7 @@ import (
 )
 
 var UsersCollection *mongo.Collection
+var OrdersCollection *mongo.Collection
 
 func InitMongoDB() *mongo.Client {
 	ctx, cancel := context.WithTimeout(context.Background(), 20*time.Second)
@@ -27,7 +28,9 @@ func InitMongoDB() *mongo.Client {
 
 	// 选择数据库home
 	database := MongoClient.Database("home")
-	// 选择表users
+	// users表
 	UsersCollection = database.Collection("users")
+	// orders表
+	OrdersCollection = database.Collection("orders")
 	return MongoClient
 }

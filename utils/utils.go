@@ -54,3 +54,25 @@ func ParseToken(tokenString string) (*MyCustomClaims, error) {
 	}
 	return nil, errors.New("invalid token")
 }
+
+// ArrayIncludes 数组是否存在该元素
+func ArrayIncludes(arr []string, s string) bool {
+	for _, v := range arr {
+		if v == s {
+			return true
+		}
+	}
+	return false
+}
+
+//func GetUserInfo(c *gin.Context) (userInfo middleware.UserInfo) {
+//	userInfoData, ok := c.Get("userInfo")
+//	if !ok {
+//		// 如果获取userInfo失败，则返回错误信息
+//		c.JSON(http.StatusUnauthorized, gin.H{"error": "Unauthorized"})
+//		return
+//	}
+//	// 断言
+//	userInfo = userInfoData.(middleware.UserInfo)
+//	return userInfo
+//}

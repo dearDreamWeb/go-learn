@@ -2,9 +2,7 @@ package v1
 
 import (
 	"context"
-	"fmt"
 	"github.com/gin-gonic/gin"
-	"go-test/middleware"
 	"go-test/model"
 	"go-test/utils"
 	"go.mongodb.org/mongo-driver/bson"
@@ -19,15 +17,15 @@ type Person struct {
 
 // UserLogin 导出的方法（或函数、变量）需要使用大写字母开头的大驼峰写法来表示
 func UserLogin(c *gin.Context) {
-	userInfoData, ok := c.Get("userInfo")
-	if !ok {
-		// 如果获取userInfo失败，则返回错误信息
-		c.JSON(http.StatusUnauthorized, gin.H{"error": "Unauthorized"})
-		return
-	}
-	// 断言
-	userInfo, ok := userInfoData.(middleware.UserInfo)
-	fmt.Println("---->", userInfo.UserId)
+	//userInfoData, ok := c.Get("userInfo")
+	//if !ok {
+	//	// 如果获取userInfo失败，则返回错误信息
+	//	c.JSON(http.StatusUnauthorized, gin.H{"error": "Unauthorized"})
+	//	return
+	//}
+	//// 断言
+	//userInfo, ok := userInfoData.(middleware.UserInfo)
+	//fmt.Println("---->", userInfo.UserId)
 	name := c.Query("name")
 	password := c.Query("password")
 	var result Person
