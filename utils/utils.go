@@ -3,13 +3,9 @@ package utils
 import (
 	"crypto/md5"
 	"encoding/hex"
-	"fmt"
-	"github.com/gin-gonic/gin"
+	"errors"
+	"github.com/golang-jwt/jwt"
 	"go-test/config"
-	"net/http"
-	"net/url"
-	"sort"
-	"strconv"
 	"time"
 )
 
@@ -26,64 +22,35 @@ func MD5(str string) string {
 	return hex.EncodeToString(h.Sum(nil))
 }
 
-// 生成签名
-func CreateSign(params url.Values) string {
-	var key []string
-	str := ""
-	for k := range params {
-		if k != "sn" {
-			key = append(key, k)
-		}
-	}
-	sort.Strings(key)
-	for i := 0; i < len(key); i++ {
-		if i == 0 {
-			str = fmt.Sprintf("%v=%v", key[i], params.Get(key[i]))
-		} else {
-			str = str + fmt.Sprintf("&%v=%v", key[i], params.Get(key[i]))
-		}
-	}
-	sign := MD5(MD5(str) + MD5(config.APP_NAME+config.APP_SECRET))
-	return sign
+type MyCustomClaims struct {
+	jwt.StandardClaims
+	Id string
 }
 
-func VerifySign(c *gin.Context) {
-	var method = c.Request.Method
-	var ts int64
-	var sn string
-	var req url.Values
-
-	if method == "GET" {
-		req = c.Request.URL.Query()
-		sn = c.Query("sn")
-		ts, _ = strconv.ParseInt(c.Query("time"), 10, 64)
-	} else if method == "POST" {
-		c.Request.ParseForm()
-		req = c.Request.PostForm
-		sn = c.PostForm("sn")
-		ts, _ = strconv.ParseInt(c.PostForm("ts"), 10, 64)
-	} else {
-		RetJson("500", "Illegal requets", "", c)
-		return
+// CreateToken 创建Jwt
+func CreateToken(id string) (string, error) {
+	claims := MyCustomClaims{
+		jwt.StandardClaims{
+			ExpiresAt: time.Now().Add(config.JWTCONFIG_EXPIRE).Unix(), // 有效期
+			Issuer:    config.JWTCONFIG_ISSUER,                        // 签发人
+			IssuedAt:  time.Now().Unix(),                              // 签发时间
+		}, id,
 	}
-	exp, _ := strconv.ParseInt(config.API_EXPIRY, 10, 64)
-
-	//	验证过期时间
-	if ts > GetTimeUnix() || GetTimeUnix()-ts >= exp {
-		RetJson("500", "Ts Error", "", c)
-		return
-	}
-	if sn == "" || sn != CreateSign(req) {
-		RetJson("500", "Sn Error", "", c)
-		return
-	}
+	newWithClaims := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
+	return newWithClaims.SignedString([]byte(config.JWTCONFIG_SECRET))
 }
 
-func RetJson(code, msg string, data interface{}, c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{
-		"code": code,
-		"msg":  msg,
-		"data": data,
+// ParseToken 解析token
+func ParseToken(tokenString string) (*MyCustomClaims, error) {
+	token, err := jwt.ParseWithClaims(tokenString, &MyCustomClaims{}, func(token *jwt.Token) (interface{}, error) {
+		return []byte(config.JWTCONFIG_SECRET), nil
 	})
-	c.Abort()
+	if err != nil {
+		return nil, err
+	}
+	if claims, ok := token.Claims.(*MyCustomClaims); ok && token.Valid {
+		//println("===id==>", claims.Id)
+		return claims, nil
+	}
+	return nil, errors.New("invalid token")
 }

@@ -13,6 +13,7 @@ func main() {
 	model.InitMongoDB()
 	gin.SetMode(gin.ReleaseMode)
 	engine := gin.Default()
+	engine.Use(middleware.JwtVerify())
 	engine.Use(middleware.LoggerToFile())
 	router.InitRouter(engine)
 	fmt.Println("开启成功")

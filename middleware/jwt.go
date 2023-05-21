@@ -1,28 +1,45 @@
 package middleware
 
 import (
-	"github.com/golang-jwt/jwt"
-	"time"
+	"github.com/gin-gonic/gin"
+	"go-test/utils"
+	"net/http"
+	"strings"
 )
 
-type MyCustomClaims struct {
-	jwt.StandardClaims
-	Uid string
+// UserInfo 中间件传递的值
+type UserInfo struct {
+	UserId string
 }
 
-// 创建Jwt
-func CreateToken(uid string) (string, error) {
-
-	claims := MyCustomClaims{
-		jwt.StandardClaims{
-			ExpiresAt: 1000 * 30, // 有效期
-			Issuer:    "admin",   // 签发人
-			IssuedAt:  time.Now().Unix(),
-			// 签发时间
-		},
-		uid,
+// JwtVerify 校验token，
+// 从header 中Authorization获取token，格式是 Bearer + 空格 + token值 /*
+func JwtVerify() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		authorizationString := c.Request.Header.Get("Authorization")
+		arr := strings.Fields(authorizationString)
+		if len(arr) <= 1 {
+			c.JSON(http.StatusOK, gin.H{
+				"success": false,
+				"msg":     "token失效",
+			})
+			c.Abort()
+			return
+		}
+		res, err := utils.ParseToken(arr[1])
+		if err != nil {
+			c.JSON(http.StatusOK, gin.H{
+				"success": false,
+				"msg":     "token失效",
+			})
+			c.Abort()
+			return
+		}
+		data := UserInfo{
+			UserId: res.Id,
+		}
+		c.Set("userInfo", data)
+		println("res===>", res)
+		c.Next()
 	}
-	newWithClaims := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
-	//return newWithClaims.SignedString([]byte(global.GvaConfig.Jwt.Secret))
-	return newWithClaims.SignedString([]byte(""))
 }
