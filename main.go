@@ -10,6 +10,7 @@ import (
 )
 
 func main() {
+	config.InitConfig()
 	model.InitMongoDB()
 	gin.SetMode(gin.ReleaseMode)
 	engine := gin.Default()

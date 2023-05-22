@@ -1,3 +1,0 @@
-jwt:
-  expires: 1000 * 30
-  secert: 123
