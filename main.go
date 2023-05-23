@@ -18,5 +18,5 @@ func main() {
 	engine.Use(middleware.LoggerToFile())
 	router.InitRouter(engine)
 	fmt.Println("开启成功")
-	engine.Run(config.PORT)
+	engine.Run(config.Config().PORT)
 }

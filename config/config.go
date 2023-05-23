@@ -6,29 +6,19 @@ import (
 	"time"
 )
 
-type JwtConfig struct {
-	Secret string
-	Issuer string
-	Expire time.Duration
-}
-
-const (
-	PORT       = ":8432"
-	APP_NAME   = "go-test"
-	APP_SECRET = "6YJSuc50uJ18zj45"
-	//API过期时间 秒为单位
-	API_EXPIRY = "120"
+type ConfigData struct {
+	PORT string
 	//log文件路径
-	Log_FILE_PATH = "./logs"
+	LOG_FILE_PATH string
 	//log文件名称
-	LOG_FILE_NAME = "system.log"
+	LOG_FILE_NAME string
 	//jwt盐值
-	JWTCONFIG_SECRET = "1111"
+	JWTCONFIG_SECRET string
 	//jwt签发人
-	JWTCONFIG_ISSUER = "wxb"
+	JWTCONFIG_ISSUER string
 	//jwt过期时间
-	JWTCONFIG_EXPIRE = time.Hour * 24
-)
+	JWTCONFIG_EXPIRE time.Duration
+}
 
 // InitConfig 初始化配置文件
 func InitConfig() {
@@ -41,4 +31,15 @@ func InitConfig() {
 		panic(fmt.Errorf("fatal error config file: %w", err))
 	}
 	//log.Printf("jwt.secert=%d\n", viper.GetInt("jwt.expires"))
+}
+
+func Config() ConfigData {
+	return ConfigData{
+		PORT:             viper.GetString("app.port"),
+		LOG_FILE_PATH:    viper.GetString("log.filePath"),
+		LOG_FILE_NAME:    viper.GetString("log.fileName"),
+		JWTCONFIG_SECRET: viper.GetString("jwt.secert"),
+		JWTCONFIG_ISSUER: viper.GetString("jwt.issuer"),
+		JWTCONFIG_EXPIRE: time.Duration(viper.GetInt("jwt.expires")),
+	}
 }

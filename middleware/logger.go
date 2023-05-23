@@ -13,8 +13,8 @@ import (
 )
 
 func LoggerToFile() gin.HandlerFunc {
-	logFilePath := config.Log_FILE_PATH
-	logFileName := config.LOG_FILE_NAME
+	logFilePath := config.Config().LOG_FILE_PATH
+	logFileName := config.Config().LOG_FILE_NAME
 	//日志文件
 	fileName := path.Join(logFilePath, logFileName)
 	src, err := os.OpenFile(fileName, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)

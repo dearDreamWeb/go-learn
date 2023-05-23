@@ -31,19 +31,19 @@ type MyCustomClaims struct {
 func CreateToken(id string) (string, error) {
 	claims := MyCustomClaims{
 		jwt.StandardClaims{
-			ExpiresAt: time.Now().Add(config.JWTCONFIG_EXPIRE).Unix(), // 有效期
-			Issuer:    config.JWTCONFIG_ISSUER,                        // 签发人
-			IssuedAt:  time.Now().Unix(),                              // 签发时间
+			ExpiresAt: time.Now().Add(config.Config().JWTCONFIG_EXPIRE).Unix(), // 有效期
+			Issuer:    config.Config().JWTCONFIG_ISSUER,                        // 签发人
+			IssuedAt:  time.Now().Unix(),                                       // 签发时间
 		}, id,
 	}
 	newWithClaims := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
-	return newWithClaims.SignedString([]byte(config.JWTCONFIG_SECRET))
+	return newWithClaims.SignedString([]byte(config.Config().JWTCONFIG_SECRET))
 }
 
 // ParseToken 解析token
 func ParseToken(tokenString string) (*MyCustomClaims, error) {
 	token, err := jwt.ParseWithClaims(tokenString, &MyCustomClaims{}, func(token *jwt.Token) (interface{}, error) {
-		return []byte(config.JWTCONFIG_SECRET), nil
+		return []byte(config.Config().JWTCONFIG_SECRET), nil
 	})
 	if err != nil {
 		return nil, err

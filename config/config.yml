@@ -4,6 +4,6 @@ log:
   filePath: ./logs
   fileName: system.log
 jwt:
-  expires: time.Hour * 24
+  expires: 86400000
   secert: qg7lvin8jl9x4bzqe7j8jbdw
   issuer: wxb
