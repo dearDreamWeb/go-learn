@@ -11,10 +11,21 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"log"
 	"net/http"
+	"time"
 )
 
 // AddOrderParams 不管是传递json还是form传值
 // 注意 ，在结构体定义时 首字母必须大写
+type Order struct {
+	Id        primitive.ObjectID `bson:"_id"`
+	OrderId   string             `bson:"order_id"`
+	OrderName string             `bson:"order_name"`
+	Price     float64            `bson:"price"`
+	UserId    primitive.ObjectID `bson:"userId"`
+	CreatedAt time.Time          `bson:"created_at"`
+	UpdatedAt time.Time          `bson:"updated_at"`
+}
+
 type AddOrderParams struct {
 	OrderId   string  `json:"orderId"`
 	OrderName string  `json:"orderName"`
@@ -36,15 +47,19 @@ func AddOrder(c *gin.Context) {
 	_ = json.Unmarshal(data, &postParams)
 	// String 转换ObjectID
 	userId, _ := primitive.ObjectIDFromHex(userInfo.UserId)
-	model.OrdersCollection.InsertOne(context.Background(), bson.M{
-		"orderId":   postParams.OrderId,
-		"orderName": postParams.OrderName,
-		"price":     float64(postParams.Price),
-		"userId":    userId,
-	})
+	var orderInfo = &Order{
+		Id:        primitive.NewObjectID(),
+		OrderId:   postParams.OrderId,
+		OrderName: postParams.OrderName,
+		Price:     float64(postParams.Price),
+		UserId:    userId,
+		CreatedAt: time.Now(),
+		UpdatedAt: time.Now(),
+	}
+	model.OrdersCollection.InsertOne(context.Background(), orderInfo)
 	c.JSON(http.StatusOK, gin.H{
 		"success": true,
-		"msg":     "订单" + postParams.OrderId + "添加成功",
+		"msg":     "订单" + orderInfo.OrderId + "添加成功",
 	})
 }
 

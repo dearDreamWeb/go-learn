@@ -15,3 +15,24 @@
 {"client_ip":"::1","latency_time":1665625,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userLogin?name=%E5%90%B4%E6%9D%B0%E8%B6%85\u0026password=123456","status_code":200,"time":"2023-05-24 23:41:42"}
 {"client_ip":"::1","latency_time":915084,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userLogin?name=%E5%90%B4%E6%9D%B0%E8%B6%85\u0026password=123456","status_code":200,"time":"2023-05-24 23:41:43"}
 {"client_ip":"::1","latency_time":777291,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/addOrder","status_code":200,"time":"2023-05-24 23:41:57"}
+{"client_ip":"::1","latency_time":922292,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/addOrder","status_code":200,"time":"2023-05-24 23:43:55"}
+{"client_ip":"::1","latency_time":902083,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/addOrder","status_code":200,"time":"2023-05-24 23:44:06"}
+time="2023-05-24T23:44:06+08:00" level=info client_ip="::1" latency_time="902.083µs" req_method=POST req_uri=/v2/addOrder status_code=200
+{"client_ip":"::1","latency_time":917084,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/addOrder","status_code":200,"time":"2023-05-24 23:44:49"}
+time="2023-05-24T23:44:49+08:00" level=info client_ip="::1" latency_time="917.084µs" req_method=POST req_uri=/v2/addOrder status_code=200
+{"client_ip":"::1","latency_time":702125,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/addOrder","status_code":200,"time":"2023-05-24 23:45:07"}
+time="2023-05-24T23:45:07+08:00" level=info client_ip="::1" latency_time="702.125µs" req_method=POST req_uri=/v2/addOrder status_code=200
+{"client_ip":"::1","latency_time":1979125,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userRegister?name=222\u0026password=123456","status_code":200,"time":"2023-05-24 23:48:02"}
+time="2023-05-24T23:48:02+08:00" level=info client_ip="::1" latency_time=1.979125ms req_method=GET req_uri="/v1/userRegister?name=222&password=123456" status_code=200
+{"client_ip":"::1","latency_time":1192875,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userRegister?name=222\u0026password=123456","status_code":200,"time":"2023-05-24 23:49:37"}
+time="2023-05-24T23:49:37+08:00" level=info client_ip="::1" latency_time=1.192875ms req_method=GET req_uri="/v1/userRegister?name=222&password=123456" status_code=200
+{"client_ip":"::1","latency_time":1427833,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userLogin?name=%E5%90%B4%E6%9D%B0%E8%B6%85\u0026password=123456","status_code":200,"time":"2023-05-24 23:49:49"}
+time="2023-05-24T23:49:49+08:00" level=info client_ip="::1" latency_time=1.427833ms req_method=GET req_uri="/v1/userLogin?name=%E5%90%B4%E6%9D%B0%E8%B6%85&password=123456" status_code=200
+{"client_ip":"::1","latency_time":716708,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userLogin?name=%E5%90%B4%E6%9D%B0%E8%B6%851\u0026password=123456","status_code":200,"time":"2023-05-24 23:49:54"}
+time="2023-05-24T23:49:54+08:00" level=info client_ip="::1" latency_time="716.708µs" req_method=GET req_uri="/v1/userLogin?name=%E5%90%B4%E6%9D%B0%E8%B6%851&password=123456" status_code=200
+{"client_ip":"::1","latency_time":711167,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userLogin?name=%E5%90%B4%E6%9D%B0%E8%B6%85\u0026password=1234561","status_code":200,"time":"2023-05-24 23:49:59"}
+time="2023-05-24T23:49:59+08:00" level=info client_ip="::1" latency_time="711.167µs" req_method=GET req_uri="/v1/userLogin?name=%E5%90%B4%E6%9D%B0%E8%B6%85&password=1234561" status_code=200
+{"client_ip":"::1","latency_time":1459167,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userLogin?name=%E5%90%B4%E6%9D%B0%E8%B6%85\u0026password=123456","status_code":200,"time":"2023-05-24 23:50:02"}
+time="2023-05-24T23:50:02+08:00" level=info client_ip="::1" latency_time=1.459167ms req_method=GET req_uri="/v1/userLogin?name=%E5%90%B4%E6%9D%B0%E8%B6%85&password=123456" status_code=200
+{"client_ip":"::1","latency_time":13265250,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/addOrder","status_code":200,"time":"2023-05-24 23:50:12"}
+time="2023-05-24T23:50:12+08:00" level=info client_ip="::1" latency_time=13.26525ms req_method=POST req_uri=/v2/addOrder status_code=200
