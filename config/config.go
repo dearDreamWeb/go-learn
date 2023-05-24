@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-type ConfigData struct {
+type ConfigDataDetail struct {
 	PORT string
 	//log文件路径
 	LOG_FILE_PATH string
@@ -20,6 +20,8 @@ type ConfigData struct {
 	JWTCONFIG_EXPIRE time.Duration
 }
 
+var ConfigData = ConfigDataDetail{}
+
 // InitConfig 初始化配置文件
 func InitConfig() {
 	viper.SetConfigName("config")   // name of config file (without extension)
@@ -31,15 +33,23 @@ func InitConfig() {
 		panic(fmt.Errorf("fatal error config file: %w", err))
 	}
 	//log.Printf("jwt.secert=%d\n", viper.GetInt("jwt.expires"))
-}
-
-func Config() ConfigData {
-	return ConfigData{
+	ConfigData = ConfigDataDetail{
 		PORT:             viper.GetString("app.port"),
 		LOG_FILE_PATH:    viper.GetString("log.filePath"),
 		LOG_FILE_NAME:    viper.GetString("log.fileName"),
 		JWTCONFIG_SECRET: viper.GetString("jwt.secert"),
 		JWTCONFIG_ISSUER: viper.GetString("jwt.issuer"),
-		JWTCONFIG_EXPIRE: time.Duration(viper.GetInt("jwt.expires")),
+		JWTCONFIG_EXPIRE: time.Hour * time.Duration(viper.GetInt("jwt.expires")),
 	}
 }
+
+//func Config() ConfigData {
+//	return ConfigData{
+//		PORT:             viper.GetString("app.port"),
+//		LOG_FILE_PATH:    viper.GetString("log.filePath"),
+//		LOG_FILE_NAME:    viper.GetString("log.fileName"),
+//		JWTCONFIG_SECRET: viper.GetString("jwt.secert"),
+//		JWTCONFIG_ISSUER: viper.GetString("jwt.issuer"),
+//		JWTCONFIG_EXPIRE: time.Duration(viper.GetInt("jwt.expires")),
+//	}
+//}

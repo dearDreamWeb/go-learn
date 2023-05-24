@@ -6,17 +6,13 @@ import (
 	"go-test/model"
 	"go-test/utils"
 	"go.mongodb.org/mongo-driver/bson"
-	"go.mongodb.org/mongo-driver/bson/primitive"
 	"net/http"
-	"time"
 )
 
 type Person struct {
-	Id        primitive.ObjectID `bson:"_id"`
-	Name      string
-	Password  string
-	CreatedAt time.Time `bson:"created_at"`
-	UpdatedAt time.Time `bson:"updated_at"`
+	Id       string `bson:"_id"`
+	Name     string
+	Password string
 }
 
 // UserLogin 导出的方法（或函数、变量）需要使用大写字母开头的大驼峰写法来表示
@@ -44,7 +40,7 @@ func UserLogin(c *gin.Context) {
 			"msg":     "用户名或密码错误",
 		})
 	} else {
-		token, _ := utils.CreateToken(result.Id.Hex())
+		token, _ := utils.CreateToken(result.Id)
 		c.JSON(http.StatusOK, gin.H{
 			"success": true,
 			"msg":     "登录成功",
@@ -63,15 +59,8 @@ func UserLogin(c *gin.Context) {
 func UserRegister(c *gin.Context) {
 	name := c.Query("name")
 	password := c.Query("password")
-	var user Person
-	user.Id = primitive.NewObjectID()
-	user.Name = name
-	user.Password = utils.MD5(password)
-	user.CreatedAt = time.Now()
-	user.UpdatedAt = time.Now()
+	model.UsersCollection.InsertOne(context.Background(), bson.M{"name": name, "password": utils.MD5(password)})
 
-	model.UsersCollection.InsertOne(context.Background(), user)
-	//model.UsersCollection.update({})
 	c.JSON(http.StatusOK, gin.H{
 		"success": true,
 		"msg":     "注册成功",

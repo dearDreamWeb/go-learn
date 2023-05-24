@@ -1,21 +1,17 @@
-{"client_ip":"::1","latency_time":1928334,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userRegister?name=www\u0026password=123456","status_code":200,"time":"2023-05-24 22:13:54"}
-{"client_ip":"::1","latency_time":921042,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userRegister?name=www111\u0026password=123456","status_code":200,"time":"2023-05-24 22:15:44"}
-time="2023-05-24T22:15:44+08:00" level=info client_ip="::1" latency_time="921.042µs" req_method=GET req_uri="/v1/userRegister?name=www111&password=123456" status_code=200
-{"client_ip":"::1","latency_time":1858417,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userRegister?name=zz\u0026password=123456","status_code":200,"time":"2023-05-24 23:06:09"}
-time="2023-05-24T23:06:09+08:00" level=info client_ip="::1" latency_time=1.858417ms req_method=GET req_uri="/v1/userRegister?name=zz&password=123456" status_code=200
-{"client_ip":"::1","latency_time":8466417,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userRegister?name=zz2\u0026password=123456","status_code":200,"time":"2023-05-24 23:07:52"}
-time="2023-05-24T23:07:52+08:00" level=info client_ip="::1" latency_time=8.466417ms req_method=GET req_uri="/v1/userRegister?name=zz2&password=123456" status_code=200
-{"client_ip":"::1","latency_time":953416,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userRegister?name=zz2\u0026password=123456","status_code":200,"time":"2023-05-24 23:12:34"}
-time="2023-05-24T23:12:34+08:00" level=info client_ip="::1" latency_time="953.416µs" req_method=GET req_uri="/v1/userRegister?name=zz2&password=123456" status_code=200
-{"client_ip":"::1","latency_time":1121875,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userRegister?name=zz2222\u0026password=123456","status_code":200,"time":"2023-05-24 23:21:12"}
-time="2023-05-24T23:21:12+08:00" level=info client_ip="::1" latency_time=1.121875ms req_method=GET req_uri="/v1/userRegister?name=zz2222&password=123456" status_code=200
-{"client_ip":"::1","latency_time":987917,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userRegister?name=1111\u0026password=123456","status_code":200,"time":"2023-05-24 23:21:46"}
-time="2023-05-24T23:21:46+08:00" level=info client_ip="::1" latency_time="987.917µs" req_method=GET req_uri="/v1/userRegister?name=1111&password=123456" status_code=200
-{"client_ip":"::1","latency_time":971917,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userRegister?name=1111\u0026password=123456","status_code":200,"time":"2023-05-24 23:23:52"}
-time="2023-05-24T23:23:52+08:00" level=info client_ip="::1" latency_time="971.917µs" req_method=GET req_uri="/v1/userRegister?name=1111&password=123456" status_code=200
-{"client_ip":"::1","latency_time":3247125,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userLogin?name=%E5%90%B4%E6%9D%B0%E8%B6%85\u0026password=123456","status_code":200,"time":"2023-05-24 23:26:07"}
-time="2023-05-24T23:26:07+08:00" level=info client_ip="::1" latency_time=3.247125ms req_method=GET req_uri="/v1/userLogin?name=%E5%90%B4%E6%9D%B0%E8%B6%85&password=123456" status_code=200
-{"client_ip":"::1","latency_time":1452417,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userLogin?name=%E5%90%B4%E6%9D%B0%E8%B6%85\u0026password=123456","status_code":200,"time":"2023-05-24 23:26:08"}
-time="2023-05-24T23:26:08+08:00" level=info client_ip="::1" latency_time=1.452417ms req_method=GET req_uri="/v1/userLogin?name=%E5%90%B4%E6%9D%B0%E8%B6%85&password=123456" status_code=200
-{"client_ip":"::1","latency_time":1378542,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userLogin?name=%E5%90%B4%E6%9D%B0%E8%B6%85\u0026password=123456","status_code":200,"time":"2023-05-24 23:38:35"}
-time="2023-05-24T23:38:35+08:00" level=info client_ip="::1" latency_time=1.378542ms req_method=GET req_uri="/v1/userLogin?name=%E5%90%B4%E6%9D%B0%E8%B6%85&password=123456" status_code=200
+{"client_ip":"::1","latency_time":17609100,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userRegister?name=wxb\u0026password=123456","status_code":200,"time":"2023-05-24 10:23:25"}
+{"client_ip":"::1","latency_time":8631500,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userLogin?name=wxb\u0026password=123456","status_code":200,"time":"2023-05-24 10:23:40"}
+{"client_ip":"::1","latency_time":1165600,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userLogin?name=wxb\u0026password=123456","status_code":200,"time":"2023-05-24 10:27:20"}
+{"client_ip":"::1","latency_time":1421800,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userLogin?name=wxb\u0026password=123456","status_code":200,"time":"2023-05-24 10:31:08"}
+{"client_ip":"::1","latency_time":411000,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userLogin?name=wxb\u0026password=123456","status_code":200,"time":"2023-05-24 10:31:10"}
+{"client_ip":"::1","latency_time":1609300,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userLogin?name=wxb\u0026password=123456","status_code":200,"time":"2023-05-24 10:33:07"}
+{"client_ip":"::1","latency_time":1207900,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userLogin?name=wxb\u0026password=123456","status_code":200,"time":"2023-05-24 10:33:54"}
+{"client_ip":"::1","latency_time":18539500,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/addOrder","status_code":200,"time":"2023-05-24 10:34:08"}
+{"client_ip":"::1","latency_time":1779700,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userLogin?name=wxb\u0026password=123456","status_code":200,"time":"2023-05-24 10:34:59"}
+{"client_ip":"::1","latency_time":928500,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/addOrder","status_code":200,"time":"2023-05-24 10:35:19"}
+{"client_ip":"::1","latency_time":1127300,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/getOrder","status_code":200,"time":"2023-05-24 10:39:49"}
+{"client_ip":"::1","latency_time":1501900,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userLogin?name=wxb\u0026password=123456","status_code":200,"time":"2023-05-24 10:40:13"}
+{"client_ip":"::1","latency_time":1579300,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/getOrder","status_code":200,"time":"2023-05-24 10:40:32"}
+{"client_ip":"::1","latency_time":634800,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/getOrder","status_code":200,"time":"2023-05-24 10:46:29"}
+{"client_ip":"::1","latency_time":1665625,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userLogin?name=%E5%90%B4%E6%9D%B0%E8%B6%85\u0026password=123456","status_code":200,"time":"2023-05-24 23:41:42"}
+{"client_ip":"::1","latency_time":915084,"level":"info","msg":"","req_method":"GET","req_uri":"/v1/userLogin?name=%E5%90%B4%E6%9D%B0%E8%B6%85\u0026password=123456","status_code":200,"time":"2023-05-24 23:41:43"}
+{"client_ip":"::1","latency_time":777291,"level":"info","msg":"","req_method":"POST","req_uri":"/v2/addOrder","status_code":200,"time":"2023-05-24 23:41:57"}
